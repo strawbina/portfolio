@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="resources/css/about.css">
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+            rel="stylesheet"
+    />
+</head>
+<body>
+<header>
+    <div class="header-flex">
+        <a href="index.html" class="logo-name">
+            <img src="resources/images/miffy copy.png" alt="Miffy Logo">
+            <h2>sabrina nguyen</h2>
+        </a>
+
+        <nav class="navigation-flex">
+            <button class="burger" aria-label="Menu">
+                <svg viewBox="0 0 100 80" width="80" height="20">
+                    <rect width="100" height="15" rx="8"></rect>
+                    <rect y="30" width="100" height="15" rx="8"></rect>
+                    <rect y="60" width="100" height="15" rx="8"></rect>
+                </svg>
+            </button>
+            <a href="index.html">Home</a>
+            <a href="index.html">Projects</a>
+            <a href="about.html" class="active">About</a>
+            <a href="resources/Sabrina_Nguyen_Resume.pdf" download>Resume</a>
+        </nav>
+    </div>
+</header>
+
+<main class="page">
+    <section class="about">
+        <div class="about-left">
+            <img class="about-photo" src="resources/images/sabrina copy.JPG" alt="a portrait picture of me">
+        </div>
+
+        <section class="about-right">
+            <h1 class="about-title">About me 👋</h1>
+
+            <div class="about-text">
+                <p>
+                    I am a Computer Science student at the <a href="https://www.ucf.edu/">University of Central Florida</a>
+                    with a strong interest in <span class="highlight">software engineering and design</span>. I enjoy
+                    combining problem-solving with creativity to build digital experiences
+                    that are both visually appealing. Technology has connected and inspired
+                    me to the world in many ways. Now, I want to bridge the gap between
+                    technology and design to more people.
+                </p>
+
+                <p class="fun-facts">More fun facts about me:</p>
+                <div class="fun-facts-details">
+                    <p>
+                        ☕️ Vanilla Honey Latte with soy milk is my current favorite caffeine beverage
+                    </p>
+                    <p>
+                        🍱 I can eat poke bowl and acai bowl for the rest of my life
+                    </p>
+                    <p>
+                        🍧 When I'm not in front of a screen, I'm either trying out new food spots
+                        or reading books
+                    </p>
+                </div>
+            </div>
+
+            <h2 class="extra-info">Want to find out more?</h2>
+
+            <div class="button-media">
+                <a class="button" href="https://www.linkedin.com/in/sabrinang1809">
+                    <i class="bi bi-linkedin"></i>
+                    Linkedin
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+
+                <a class="button" href="https://github.com/strawbina">
+                    <i class="bi bi-github"></i>
+                    GitHub
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+
+                <a class="button" href="mailto:sabinang1809@gmail.com">
+                    <i class="bi bi-send-fill"></i>
+                    Email
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+            </div>
+        </section>
+    </section>
+</main>
+
+<footer>
+    <p>built by sabrina nguyen 🤍</p>
+</footer>
+
+</body>
+
+<script>
+    document.querySelector('.burger')
+        .addEventListener('click', () =>
+            document.querySelector('.navigation-flex')
+                .classList.toggle('open')
+        );
+</script>
+</html>

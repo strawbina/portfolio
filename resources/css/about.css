@@ -1,0 +1,271 @@
+@font-face{
+    font-family:'Geist-Mono';
+    src:
+            url('../fonts/GeistMono-Black.ttf') format('ttf'),
+            url('../fonts/GeistMono-Bold.ttf')format('ttf'),
+            url('../fonts/GeistMono-ExtraBold.ttf')format('ttf'),
+            url('../fonts/GeistMono-ExtraLight.ttf')format('ttf'),
+            url('../fonts/GeistMono-Light.ttf')format('ttf'),
+            url('../fonts/GeistMono-Medium.ttf')format('ttf'),
+            url('../fonts/GeistMono-Regular.ttf')format('ttf'),
+            url('../fonts/GeistMono-SemiBold.ttf')format('ttf'),
+            url('../fonts/GeistMono-Thin.ttf')format('ttf'),
+            url('../fonts/GeistMono-VariableFont_wght.ttf')format('ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "geist-mono", monospace;
+    background-color: #F7F4EF;
+    color: #1f1f1f;
+    line-height: 1.5;
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #F4F3F1;
+    padding: 0.2rem 1rem;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+    gap: 0.01rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-name h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    font-family: "geist-mono", monospace;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-flex img {
+    width: 80px;
+}
+
+.navigation-flex {
+    font-family: "geist-mono", monospace;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    padding-block: 1rem;
+}
+
+.navigation-flex a {
+    font-family: "geist-mono", monospace;
+    text-decoration: none;
+    color: #36393A;
+    font-weight: 550;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    padding: 0.5rem 0;
+}
+
+.navigation-flex a.active {
+    color:  #3171C6;
+    font-weight: 600;
+}
+
+.navigation-flex a:hover {
+    color: #D14C18;
+    font-weight: 600;
+}
+
+.burger {
+    align-items: center;
+    display: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.burger svg {
+    fill: #36393A;
+    transform: translateY(4px);
+}
+
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 10px;
+}
+.about {
+    display: flex;
+    align-items: stretch;
+    justify-content: start;
+    gap: 50px;
+}
+
+.about-left {
+    flex: 0 0 400px;
+}
+
+.about-photo {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 2px;
+    display: block;
+}
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 600px;
+}
+
+.about-title {
+    font-family: "geist-mono", monospace;
+    margin: 0 0 18px;
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #3171C6;
+}
+
+.about-text p {
+    font-family: "geist-mono", monospace;
+    margin: 0 0 18px;
+    line-height: 2rem;
+    font-size: 16px;
+    color: #36393A;
+}
+
+.highlight {
+    color: #D14C18;
+}
+
+.about-text a {
+    font-weight: 600;
+    color: #3171C6;
+}
+
+.about-text .fun-facts {
+    font-family: "geist-mono", monospace;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 16px;
+    color: #3171C6;
+}
+
+.about-text .fun-facts-details p {
+    line-height: 1.4em;
+}
+
+
+.extra-info {
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.button-media {
+    margin-top: 0;
+    padding-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.button {
+    border: 2.5px solid #36393A;
+    padding: 10px 20px;
+    text-decoration: none;
+    align-items: center;
+}
+
+.button:visited {
+    color:#36393A;
+}
+
+.button:hover {
+    color: #3171C6;
+    border: 2.5px solid #36393A;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    margin: 3rem 0 0 0;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .navigation-flex {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .navigation-flex a {
+        display: none;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .navigation-flex.open a {
+        display: block;
+    }
+
+    /* move image to the top */
+    .img-text {
+        order: -1;
+    }
+
+    .hero-text {
+        align-items: center;
+    }
+
+    .hero-text h2 {
+        padding-left: 0;
+        white-space: normal;
+    }
+
+    .button-media {
+        justify-content: center;
+        margin-top: 20px;
+        padding-top: 0;
+    }
+
+    .extra-info {
+        margin-top: 4rem;
+    }
+
+    .button-media {
+        justify-content: center;
+    }
+}
+
+
+
+
